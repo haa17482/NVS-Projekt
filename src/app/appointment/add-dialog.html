@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Aufgabe hinzufügen</h1>
+<div mat-dialog-content>
+  <mat-form-field >
+    <input matInput [(ngModel)]="appointment.title" [placeholder]="appointment.title === '' ? 'Titel eingeben' : 'Titel'">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="appointment.priority" [placeholder]="'Priorität (0 oder 1)'">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="appointment.date" [placeholder]="appointment.date === '' ? 'Datum eingeben' :'Datum (yyyy-MM-dd)'">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="appointment.subject" [placeholder]="appointment.subject === '' ? 'Fach eingeben' : 'Fach'">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button (click) ="save()" >Save</button>
+</div>
